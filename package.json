@@ -1,7 +1,9 @@
 {
-  "name": "vite-project",
+  "name": "react-digital-clock",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Simple Digital Clock with ReactJS",
+  "author": "rizkytegar",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,10 +12,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "luxon": "^3.4.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@types/luxon": "^3.3.3",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
