@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { DateTime } from "luxon";
-import "./App.css";
+// import "./App.css";
 
 /**
  * Renders a digital clock component that displays the current time in the selected time zone.
@@ -31,15 +31,19 @@ function App() {
    * @param {any} e - The event object.
    * @return {void} This function does not return a value.
    */
-  const handleZoneChange = (e:any) => {
+  const handleZoneChange = (e: any) => {
     setZone(e.target.value);
   };
 
   return (
-    <>
-      <h3>Indonesian Digital Clock</h3>
+    <div className="">
+      <h3 className="">Indonesian Digital Clock</h3>
       <h1>{loading ? "Loading..." : jam.toFormat("HH:mm:ss")}</h1>
-      <p>{loading ? "Loading..." : jam.toFormat("cccc, dd LLLL yyyy", { locale: "id" })}</p>
+      <p>
+        {loading
+          ? "Loading..."
+          : jam.toFormat("cccc, dd LLLL yyyy", { locale: "id" })}
+      </p>
       <div className="card">
         <select
           className="custom-select"
@@ -52,9 +56,11 @@ function App() {
         </select>
       </div>
       <p className="read-the-docs">
-        <a href="https://github.com/rizkytegar/react-digital-clock">Contribute on Github</a>
+        <a href="https://github.com/rizkytegar/react-digital-clock">
+          Contribute on Github
+        </a>
       </p>
-    </>
+    </div>
   );
 }
 
