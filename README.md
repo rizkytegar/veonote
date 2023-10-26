@@ -9,13 +9,13 @@ To run this project, follow these steps:
 1. Clone the repository from GitHub:
 
    ```bash
-   git clone https://github.com/rizkytegar/react-digital-clock
+   git clone https://github.com/rizkytegar/indonesian-digital-clock
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd react-digital-clock
+   cd indonesian-digital-clock
    ```
 
 3. Install the required dependencies:
