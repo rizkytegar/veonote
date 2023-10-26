@@ -31,27 +31,28 @@ function App() {
    * @param {any} e - The event object.
    * @return {void} This function does not return a value.
    */
-  const handleZoneChange = (e: any) => {
+  const handleZoneChange = (e:any) => {
     setZone(e.target.value);
   };
 
   return (
     <>
-      <h1> {loading ? "Loading..." : jam.toFormat("HH:mm:ss")}</h1>
+      <h3>Indonesian Digital Clock</h3>
+      <h1>{loading ? "Loading..." : jam.toFormat("HH:mm:ss")}</h1>
+      <p>{loading ? "Loading..." : jam.toFormat("cccc, dd LLLL yyyy", { locale: "id" })}</p>
       <div className="card">
         <select
           className="custom-select"
           onChange={handleZoneChange}
           value={zone}
         >
-          <option value="Asia/Jakarta">WIB (Asia/Jakarta)</option>
-          <option value="Asia/Makassar">WITA (Asia/Makassar)</option>
-          <option value="Asia/Jayapura">WIT (Asia/Jayapura)</option>
+          <option value="Asia/Jakarta">WIB (Jakarta)</option>
+          <option value="Asia/Makassar">WITA (Makassar)</option>
+          <option value="Asia/Jayapura">WIT (Jayapura)</option>
         </select>
       </div>
       <p className="read-the-docs">
-        Contribution on{" "}
-        <a href="https://github.com/rizkytegar/react-digital-clock">Github</a>
+        <a href="https://github.com/rizkytegar/react-digital-clock">Contribute on Github</a>
       </p>
     </>
   );
