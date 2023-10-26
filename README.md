@@ -1,27 +1,63 @@
-# React + TypeScript + Vite
+# 👋 Simple Digital Clock with ReactJS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple project to create a digital clock using ReactJS. In this project, I have used useState and useEffect, and I have also used [luxon](https://www.npmjs.com/package/luxon) to fetch time based on the time zone.
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To run this project, follow these steps:
 
-## Expanding the ESLint configuration
+1. Clone the repository from GitHub:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+   ```bash
+   git clone https://github.com/rizkytegar/react-digital-clock
+   ```
 
-- Configure the top-level `parserOptions` property like this:
+2. Navigate to the project directory:
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+   ```bash
+   cd react-digital-clock
+   ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+3. Install the required dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the project:
+
+   ```bash
+   npm start
+   ```
+
+## Contribution
+
+We welcome contributions from the community. If you would like to contribute to this project, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for the feature or fix you want to contribute:
+
+   ```bash
+   git checkout -b new-feature
+   ```
+
+3. Make the necessary changes.
+4. Commit your changes:
+
+   ```bash
+   git commit -m "Add new feature"
+   ```
+
+5. Push to your branch:
+
+   ```bash
+   git push origin new-feature
+   ```
+
+6. Create a Pull Request to the original repository.
+
+## Author
+
+- [Rizky Tegar Pratama](https://github.com/rizkytegar)
+
+Please feel free to reach out if you have any questions or issues related to this project. Thank you for contributing!
