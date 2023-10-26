@@ -1,6 +1,6 @@
-# 👋 Simple Digital Clock with ReactJS
+# 👋 Indonesian Digital Clock
 
-A simple project to create a digital clock using ReactJS. In this project, I have used useState and useEffect, and I have also used [luxon](https://www.npmjs.com/package/luxon) to fetch time based on the time zone.
+A simple project to create a digital clock using Vite and ReactJS. In this project, I have used useState and useEffect, and I have also used [luxon](https://www.npmjs.com/package/luxon) to fetch time based on the time zone.
 
 ## Installation
 
