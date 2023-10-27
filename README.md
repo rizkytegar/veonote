@@ -27,7 +27,24 @@ To run this project, follow these steps:
 4. Start the project:
 
    ```bash
-   npm start
+   npm run dev
+   ```
+
+   Open CLI in Another tab, Then Type:
+
+   ```bash
+   npm run tailwind
+   ```
+
+   See the json script below for more details
+   ```json
+   "scripts": {
+      "dev": "vite",
+      "tailwind": "npx tailwindcss -i ./src/App.css -o ./src/style.css --watch ",
+      "build": "tsc && vite build && npx tailwindcss build -i ./src/App.css -o ./src/style.css",
+      "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+      "preview": "vite preview"
+   },
    ```
 
 ## Contribution

@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { DateTime } from "luxon";
-// import "./App.css";
-
+import SelectTimeZone from "./SelectTimeZone";
 /**
  * Renders a digital clock component that displays the current time in the selected time zone.
  *
@@ -36,31 +35,46 @@ function App() {
   };
 
   return (
-    <div className="">
-      <h3 className="">Indonesian Digital Clock</h3>
-      <h1>{loading ? "Loading..." : jam.toFormat("HH:mm:ss")}</h1>
-      <p>
-        {loading
-          ? "Loading..."
-          : jam.toFormat("cccc, dd LLLL yyyy", { locale: "id" })}
-      </p>
-      <div className="card">
-        <select
-          className="custom-select"
-          onChange={handleZoneChange}
-          value={zone}
-        >
-          <option value="Asia/Jakarta">WIB (Jakarta)</option>
-          <option value="Asia/Makassar">WITA (Makassar)</option>
-          <option value="Asia/Jayapura">WIT (Jayapura)</option>
-        </select>
+    <main className="bg-primary-focus grid h-screen place-items-center px-6 py-24 sm:py-32 lg:px-8">
+      <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card-body">
+          <p className="text-base font-semibold text-indigo-600">
+            {loading
+              ? "Loading..."
+              : jam.toFormat("cccc, dd LLLL yyyy", { locale: "id" })}
+          </p>
+          <h1 className="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+            {loading ? "Loading..." : jam.toFormat("HH:mm:ss")}
+          </h1>
+          <div className="mt-10 flex items-center justify-center gap-x-6">
+            <select
+              onChange={handleZoneChange}
+              value={zone}
+              className="select bg-secondary text-white select-bordered w-full max-w-xs"
+            >
+              <option
+                className="bg-white text-primary"
+                value="Asia/Jakarta"
+              >
+                WIB (Jakarta)
+              </option>
+              <option
+                className="bg-white text-primary"
+                value="Asia/Makassar"
+              >
+                WITA (Makassar)
+              </option>
+              <option
+                className="bg-white text-primary"
+                value="Asia/Jayapura"
+              >
+                WIT (Jayapura)
+              </option>
+            </select>
+          </div>
+        </div>
       </div>
-      <p className="read-the-docs">
-        <a href="https://github.com/rizkytegar/react-digital-clock">
-          Contribute on Github
-        </a>
-      </p>
-    </div>
+    </main>
   );
 }
 
