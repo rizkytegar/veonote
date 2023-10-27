@@ -56,8 +56,15 @@ We welcome contributions from the community. If you would like to contribute to 
 
 6. Create a Pull Request to the original repository.
 
-## Author
+## Contributors
 
-- [Rizky Tegar Pratama](https://github.com/rizkytegar)
+<table>
+  <tbody>
+    <tr>
+      <td align="center"><a href="https://github.com/rizkytegar"><img src="https://avatars.githubusercontent.com/u/55475891?v=4?s=100" width="100px;" alt="Rizky Tegar Pratama"/><br /><sub><b>Rizky Tegar Pratama</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/systm-spec"><img src="https://avatars.githubusercontent.com/u/83221877?v=4?s=100" width="100px;" alt="Stread"/><br /><sub><b>Stread</b></sub></a><br /></td>
+    </tr>
+  </tbody>
+</table>
 
 Please feel free to reach out if you have any questions or issues related to this project. Thank you for contributing!
