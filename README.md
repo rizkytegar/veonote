@@ -27,7 +27,24 @@ To run this project, follow these steps:
 4. Start the project:
 
    ```bash
-   npm start
+   npm run dev
+   ```
+
+   Open CLI in Another tab, Then Type:
+
+   ```bash
+   npm run tailwind
+   ```
+
+   See the json script below for more details
+   ```json
+   "scripts": {
+      "dev": "vite",
+      "tailwind": "npx tailwindcss -i ./src/App.css -o ./src/style.css --watch ",
+      "build": "tsc && vite build && npx tailwindcss build -i ./src/App.css -o ./src/style.css",
+      "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+      "preview": "vite preview"
+   },
    ```
 
 ## Contribution
@@ -56,8 +73,15 @@ We welcome contributions from the community. If you would like to contribute to 
 
 6. Create a Pull Request to the original repository.
 
-## Author
+## Contributors
 
-- [Rizky Tegar Pratama](https://github.com/rizkytegar)
+<table>
+  <tbody>
+    <tr>
+      <td align="center"><a href="https://github.com/rizkytegar"><img src="https://avatars.githubusercontent.com/u/55475891?v=4?s=100" width="100px;" alt="Rizky Tegar Pratama"/><br /><sub><b>Rizky Tegar Pratama</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/systm-spec"><img src="https://avatars.githubusercontent.com/u/83221877?v=4?s=100" width="100px;" alt="Stread"/><br /><sub><b>Stread</b></sub></a><br /></td>
+    </tr>
+  </tbody>
+</table>
 
 Please feel free to reach out if you have any questions or issues related to this project. Thank you for contributing!
