@@ -33,7 +33,7 @@ function App() {
     }
 
     fetchHolidays();
-    
+
     const intervalId = setInterval(() => {
       setJam(DateTime.now().setZone(zone));
       setLoading(false);
@@ -47,8 +47,11 @@ function App() {
   return (
     <main className="bg-primary-focus grid h-auto md:h-screen w-auto place-items-center px-6 py-24 lg:px-8">
       <div className="card w-full md:w-96 bg-base-100 shadow-xl">
-      <DigitalClock loading={loading} jam={jam} />
-      <TimeZoneSelector zone={zone} setZone={setZone} loadingLibur={loadingLibur} holidays={holidays}/>
+        <div className="card-body">
+          <DigitalClock loading={loading} jam={jam} />
+          <TimeZoneSelector zone={zone} setZone={setZone} loadingLibur={loadingLibur} holidays={holidays} />
+          <a className="text-center mt-10 font-semibold" target="_new" href="https://github.com/rizkytegar/indonesian-digital-clock">Kontribusi Di Github</a>
+        </div>
       </div>
     </main>
   );

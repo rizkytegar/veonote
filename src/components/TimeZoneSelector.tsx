@@ -28,8 +28,8 @@ const TimeZoneSelector: React.FC<TimeZoneSelectorProps> = ({
     date.toFormat("cccc, dd LLLL yyyy", { locale: "id" });
 
   return (  
-    <div className="card-body">
-      <div className="mt-10 flex items-center justify-center gap-x-6">
+    <div>
+      <div className="flex items-center justify-center">
         <select
           onChange={handleZoneChange}
           value={zone}
