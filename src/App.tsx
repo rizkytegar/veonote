@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, useEffect } from "react";
 import { DateTime } from "luxon";
-import DigitalClock from './components/DigitalClock';
-import TimeZoneSelector from './components/TimeZoneSelector';
+import DigitalClock from "./components/DigitalClock";
+import TimeZoneSelector from "./components/TimeZoneSelector";
 /**
  * Renders a digital clock component that displays the current time in the selected time zone.
  *
@@ -50,8 +50,21 @@ function App() {
       <div className="card w-full md:w-96 bg-base-100 shadow-xl">
         <div className="card-body">
           <DigitalClock loading={loading} jam={jam} />
-          <TimeZoneSelector zone={zone} setZone={setZone} loadingLibur={loadingLibur} holidays={holidays} />
-          <a className="text-center mt-10 font-semibold" target="_new" href="https://github.com/rizkytegar/indonesian-digital-clock">Kontribusi Di Github</a>
+
+          <TimeZoneSelector
+            zone={zone}
+            setZone={setZone}
+            setLoading={setLoading}
+            loadingLibur={loadingLibur}
+            holidays={holidays}
+          />
+          <a
+            className="text-center mt-10 font-semibold"
+            target="_new"
+            href="https://github.com/rizkytegar/indonesian-digital-clock"
+          >
+            Kontribusi Di Github
+          </a>
         </div>
       </div>
     </main>
