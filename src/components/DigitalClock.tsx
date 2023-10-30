@@ -1,22 +1,10 @@
-import { DateTime } from "luxon";
-import { useState, useEffect } from "react";
-
+import { DateTime } from "luxon"; 
 interface DigitalClockProps {
   jam: DateTime;
   loading: boolean;
 }
 
-const DigitalClock: React.FC<DigitalClockProps> = ({ jam }) => {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
+const DigitalClock: React.FC<DigitalClockProps> = ({ loading, jam }) => {
   return (
     <div className="card-body">
       <p className="text-center mb-3 text-lg font-semibold text-indigo-600">
