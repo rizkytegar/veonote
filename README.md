@@ -84,6 +84,9 @@ We welcome contributions from the community. If you would like to contribute to 
       <td align="center"><a href="https://github.com/rizkytegar"><img src="https://avatars.githubusercontent.com/u/55475891?v=4?s=100" width="100px;" alt="Rizky Tegar Pratama"/><br /><sub><b>Rizky Tegar Pratama</b></sub></a><br /></td>
       <td align="center"><a href="https://github.com/systm-spec"><img src="https://avatars.githubusercontent.com/u/83221877?v=4?s=100" width="100px;" alt="Stread"/><br /><sub><b>Stread</b></sub></a><br /></td>
              <td align="center"><a href="https://github.com/KathanrDave"><img src="https://avatars.githubusercontent.com/u/108331571?v=4?s=100" width="100px;" alt="KathanrDave"/><br /><sub><b>KathanrDave</b></sub></a><br /></td>
+         <td align="center"><a href="https://github.com/ahmadammarm"><img src="https://avatars.githubusercontent.com/u/113039347?v=4?s=100" width="100px;" alt="Ahmad Ammar Musyaffa
+"/><br /><sub><b>Ahmad Ammar Musyaffa
+</b></sub></a><br /></td>
     </tr>
   </tbody>
 </table>
