@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { DateTime } from "luxon";
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 interface TimeZoneSelectorProps {
   zone: string;
@@ -12,6 +12,7 @@ interface TimeZoneSelectorProps {
 const TimeZoneSelector: React.FC<TimeZoneSelectorProps> = ({
   zone,
   setZone,
+  loadingLibur,
   holidays,
 }) => {
   /**
@@ -26,16 +27,6 @@ const TimeZoneSelector: React.FC<TimeZoneSelectorProps> = ({
 
   const formatDate = (date: DateTime) =>
     date.toFormat("cccc, dd LLLL yyyy", { locale: "id" });
-
-  const [loadingLibur, setLoadingLibur] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoadingLibur(false);
-    }, 2000);
-
-    return () => clearTimeout(timer);
-  }, []);
 
   return (  
     <div>

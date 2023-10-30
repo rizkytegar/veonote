@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 
 interface DigitalClockProps {
   jam: DateTime;
+  loading: boolean;
 }
 
 const DigitalClock: React.FC<DigitalClockProps> = ({ jam }) => {
