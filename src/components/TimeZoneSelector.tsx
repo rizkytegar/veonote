@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { DateTime } from "luxon";
-import React from "react";
 
 interface TimeZoneSelectorProps {
   zone: string;
@@ -9,11 +8,14 @@ interface TimeZoneSelectorProps {
   holidays: any[];
 }
 
-const TimeZoneSelector: React.FC<TimeZoneSelectorProps> = ({
+const TimeZoneSelector: React.FC<
+  TimeZoneSelectorProps & { setLoading: (loading: boolean) => void }
+> = ({
   zone,
   setZone,
   loadingLibur,
   holidays,
+  setLoading, // Terima setLoading dari DigitalClock
 }) => {
   /**
    * Updates the zone state based on the value of the event target.
@@ -21,14 +23,16 @@ const TimeZoneSelector: React.FC<TimeZoneSelectorProps> = ({
    * @param {any} e - The event object.
    * @return {void} This function does not return a value.
    */
+
   const handleZoneChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setLoading(true); // Set loading ke true saat zone berubah
     setZone(e.target.value);
   };
 
   const formatDate = (date: DateTime) =>
     date.toFormat("cccc, dd LLLL yyyy", { locale: "id" });
 
-  return (  
+  return (
     <div>
       <div className="flex items-center justify-center">
         <select
