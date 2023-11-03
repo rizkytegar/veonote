@@ -1,6 +1,8 @@
 # 👋 Indonesian Digital Clock
 
-![image](https://i.ibb.co/PQCFRbJ/278534331-a655cb47-d8e1-42d5-882c-388b2f0a976e.png)
+<center>
+<img src="https://i.ibb.co/PQCFRbJ/278534331-a655cb47-d8e1-42d5-882c-388b2f0a976e.png">
+</center>
 
 
 A simple project to create a digital clock using Vite and ReactJS. In this project, I have used useState and useEffect, and I have also used [luxon](https://www.npmjs.com/package/luxon) to fetch time based on the time zone.
