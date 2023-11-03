@@ -94,5 +94,3 @@ We welcome contributions from the community. If you would like to contribute to 
 </table>
 
 Please feel free to reach out if you have any questions or issues related to this project. Thank you for contributing!
-
-👋 Welcome new Contributor, @Vswaroop04
