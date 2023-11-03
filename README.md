@@ -88,8 +88,11 @@ We welcome contributions from the community. If you would like to contribute to 
 "/><br /><sub><b>Ahmad Ammar Musyaffa
 </b></sub></a><br /></td>
           <td align="center"><a href="https://github.com/Vswaroop04"><img src="https://avatars.githubusercontent.com/u/97403550?v=4?s=100" width="100px;" alt="Vishnu Swaroop"/><br /><sub><b>Vishnu Swaroop</b></sub></a><br /></td>
+           <td align="center"><a href="https://github.com/sanskarmalkhede"><img src="https://avatars.githubusercontent.com/u/85408959?v=4?s=100" width="100px;" alt="Sanskar Malkhede"/><br /><sub><b>Sanskar Malkhede</b></sub></a><br /></td>
     </tr>
   </tbody>
 </table>
 
 Please feel free to reach out if you have any questions or issues related to this project. Thank you for contributing!
+
+👋 Welcome new Contributor, @Vswaroop04
