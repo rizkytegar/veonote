@@ -1,6 +1,8 @@
 # 👋 Indonesian Digital Clock
 
-![image](https://github.com/rizkytegar/indonesian-digital-clock/assets/55475891/a655cb47-d8e1-42d5-882c-388b2f0a976e)
+<center>
+<img src="https://i.ibb.co/PQCFRbJ/278534331-a655cb47-d8e1-42d5-882c-388b2f0a976e.png">
+</center>
 
 
 A simple project to create a digital clock using Vite and ReactJS. In this project, I have used useState and useEffect, and I have also used [luxon](https://www.npmjs.com/package/luxon) to fetch time based on the time zone.
@@ -87,8 +89,11 @@ We welcome contributions from the community. If you would like to contribute to 
          <td align="center"><a href="https://github.com/ahmadammarm"><img src="https://avatars.githubusercontent.com/u/113039347?v=4?s=100" width="100px;" alt="Ahmad Ammar Musyaffa
 "/><br /><sub><b>Ahmad Ammar Musyaffa
 </b></sub></a><br /></td>
-          <td align="center"><a href="https://github.com/Vswaroop04"><img src="https://avatars.githubusercontent.com/u/97403550?v=4?s=100" width="100px;" alt="Vishnu Swaroop"/><br /><sub><b>Vishnu Swaroop</b></sub></a><br /></td>
+    </tr>
+    <tr>
+    <td align="center"><a href="https://github.com/Vswaroop04"><img src="https://avatars.githubusercontent.com/u/97403550?v=4?s=100" width="100px;" alt="Vishnu Swaroop"/><br /><sub><b>Vishnu Swaroop</b></sub></a><br /></td>
            <td align="center"><a href="https://github.com/sanskarmalkhede"><img src="https://avatars.githubusercontent.com/u/85408959?v=4?s=100" width="100px;" alt="Sanskar Malkhede"/><br /><sub><b>Sanskar Malkhede</b></sub></a><br /></td>
+            <td align="center"><a href="https://github.com/ilsyaa"><img src="https://avatars.githubusercontent.com/u/76580335?v=4?s=100" width="100px;" alt="ilsyaa"/><br /><sub><b>イルシャア</b></sub></a><br /></td>
     </tr>
   </tbody>
 </table>

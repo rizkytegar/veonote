@@ -13,6 +13,5 @@ export default {
       warning: "#b06a07",
       error: "#e94e3a",
     },
-  ],
-  plugins: [require("daisyui")],
+  ]
 };

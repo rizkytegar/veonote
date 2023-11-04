@@ -38,28 +38,28 @@ const TimeZoneSelector: React.FC<
         <select
           onChange={handleZoneChange}
           value={zone}
-          className="select bg-secondary text-white select-bordered w-full max-w-xs"
+          className="select bg-white bg-opacity-30 text-white w-full p-3 rounded-full cursor-pointer appearance-none text-center focus:outline-none focus:ring-0"
         >
-          <option className="bg-white text-primary" value="Asia/Jakarta">
+          <option className="bg-white bg-opacity-30 text-black" value="Asia/Jakarta">
             WIB (Jakarta)
           </option>
-          <option className="bg-white text-primary" value="Asia/Makassar">
+          <option className="bg-white bg-opacity-30 text-black" value="Asia/Makassar">
             WITA (Makassar)
           </option>
-          <option className="bg-white text-primary" value="Asia/Jayapura">
+          <option className="bg-white bg-opacity-30 text-black" value="Asia/Jayapura">
             WIT (Jayapura)
           </option>
         </select>
       </div>
 
-      <div className="mt-6">
-        <p className="text-left mb-3 text-base text-md font-semibold text-indigo-600">
+      <div className="mt-6 text-center text-white">
+        <p className="mb-1 text-base text-md font-bold">
           Hari Libur Nasional Bulan Ini
         </p>
         {loadingLibur ? (
           "Loading..."
         ) : holidays.length === 0 ? (
-          <p className="text-sm text-gray-700">
+          <p className="text-sm">
             Yah, sayang sekali tidak ada hari libur Nasional Bulan ini
           </p>
         ) : (
@@ -67,7 +67,7 @@ const TimeZoneSelector: React.FC<
             <ul>
               {holidays.map((holiday) => (
                 <li
-                  className="text-xs text-gray-700 font-semibold border border-gray rounded-lg p-1 mb-2"
+                  className="text-xs font-semibold border border-gray rounded-lg p-1 mb-2"
                   key={holiday.holiday_date}
                 >
                   {holiday.holiday_name}
