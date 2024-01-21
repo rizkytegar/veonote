@@ -72,7 +72,8 @@ const TimeZoneSelector: React.FC<
                 >
                   {holiday.holiday_name}
                   <br />
-                  {formatDate(DateTime.fromISO(holiday.holiday_date))}
+                  {formatDate(DateTime.fromISO(holiday.holiday_date, { locale: "id" }))}
+{/*                   {formatDate(DateTime.fromISO(holiday.holiday_date))} */}
                 </li>
               ))}
             </ul>
