@@ -1,5 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import React from "react";
 import { DateTime } from "luxon";
+import Clock from "./Clock";
 
 interface TimeZoneSelectorProps {
   zone: string;
@@ -8,24 +10,15 @@ interface TimeZoneSelectorProps {
   holidays: any[];
 }
 
-const TimeZoneSelector: React.FC<
-  TimeZoneSelectorProps & { setLoading: (loading: boolean) => void }
-> = ({
+const TimeZoneSelector: React.FC<TimeZoneSelectorProps & { setLoading: (loading: boolean) => void }> = ({
   zone,
   setZone,
   loadingLibur,
   holidays,
-  setLoading, // Terima setLoading dari DigitalClock
+  setLoading,
 }) => {
-  /**
-   * Updates the zone state based on the value of the event target.
-   *
-   * @param {any} e - The event object.
-   * @return {void} This function does not return a value.
-   */
-
   const handleZoneChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setLoading(true); // Set loading ke true saat zone berubah
+    setLoading(true); // Set loading to true when zone changes
     setZone(e.target.value);
   };
 
@@ -66,33 +59,19 @@ const TimeZoneSelector: React.FC<
           value={zone}
           className="select bg-white bg-opacity-30 text-white w-full p-3 rounded-full cursor-pointer appearance-none text-center focus:outline-none focus:ring-0"
         >
-          <option
-            className="bg-white bg-opacity-30 text-black"
-            value="Asia/Jakarta"
-          >
-            WIB (Jakarta)
-          </option>
-          <option
-            className="bg-white bg-opacity-30 text-black"
-            value="Asia/Makassar"
-          >
-            WITA (Makassar)
-          </option>
-          <option
-            className="bg-white bg-opacity-30 text-black"
-            value="Asia/Jayapura"
-          >
-            WIT (Jayapura)
-          </option>
+          <option className="bg-white bg-opacity-30 text-black" value="Asia/Jakarta">WIB (Jakarta)</option>
+          <option className="bg-white bg-opacity-30 text-black" value="Asia/Makassar">WITA (Makassar)</option>
+          <option className="bg-white bg-opacity-30 text-black" value="Asia/Jayapura">WIT (Jayapura)</option>
         </select>
       </div>
 
       <div className="mt-6 text-center text-white">
-        <p className="mb-1 text-base text-md font-bold">
-          Hari Libur Nasional Bulan Ini
-        </p>
+        <p className="mb-1 text-base text-md font-bold">Hari Libur Nasional Bulan Ini</p>
         {loadingLibur ? "Loading..." : generateHolidays(holidays)}
       </div>
+
+      {/* Add the Clock component here and pass the selected zone */}
+      <Clock zone={zone} />
     </div>
   );
 };
