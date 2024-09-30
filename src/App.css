@@ -1,21 +1,37 @@
+:root {
+  --max-width: 1280px;
+  --primary-color: #646cff;
+  --secondary-color: #61dafb;
+  --text-color: #888;
+  --hover-filter: drop-shadow(0 0 2em rgba(100, 108, 255, 0.67));
+  --react-hover-filter: drop-shadow(0 0 2em rgba(97, 218, 251, 0.67));
+  --card-background: #f9f9f9;
+  --card-border: #ddd;
+}
+
 #root {
-  max-width: 1280px;
+  max-width: var(--max-width);
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: #fff; /* Optional background for better contrast */
 }
 
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
-  transition: filter 300ms;
+  transition: filter 300ms ease, transform 300ms ease; /* Added transition for transform */
 }
+
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: var(--hover-filter);
+  transform: scale(1.05); /* Slightly enlarge logo on hover */
 }
+
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: var(--react-hover-filter);
+  transform: scale(1.05); /* Consistent hover effect */
 }
 
 @keyframes logo-spin {
@@ -35,8 +51,38 @@
 
 .card {
   padding: 2em;
+  background-color: var(--card-background);
+  border: 1px solid var(--card-border);
+  border-radius: 8px; /* Rounded corners for cards */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 200ms ease; /* Smooth transition for scaling */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
 }
 
 .read-the-docs {
-  color: #888;
+  color: var(--text-color);
+  font-weight: bold; /* Make the text bolder for emphasis */
+  transition: color 200ms ease; /* Smooth color transition */
+}
+
+.read-the-docs:hover {
+  color: var(--primary-color); /* Change color on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem; /* Reduce padding on smaller screens */
+  }
+
+  .logo {
+    height: 4em; /* Adjust logo size */
+  }
+
+  .card {
+    padding: 1.5em; /* Adjust card padding */
+  }
 }
