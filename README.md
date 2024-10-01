@@ -27,3 +27,20 @@ This is the wireframe I made, for now it's just an example. The website will be 
 ## Guidelines for Hacktoberfest 2024 Contributors
 
 Read the Hacktoberfest guide here: [Guidelines for Hacktoberfest 2024 Contributors](https://github.com/rizkytegar/veonote/issues/33)
+
+## Contributors
+
+<table>
+  <tbody>
+    <tr>
+      <td align="center">
+        <a href="https://github.com/rizkytegar">
+          <img src="https://avatars.githubusercontent.com/u/55475891?v=4?s=100" width="100px;" alt="Rizky Tegar Pratama"/>
+          <br/>
+          <sub>
+            <b>Rizky Tegar Pratama</b>
+          </sub>
+        </a>
+     </tr>
+  </tbody>
+</table>
