@@ -41,6 +41,16 @@ Read the Hacktoberfest guide here: [Guidelines for Hacktoberfest 2024 Contributo
             <b>Rizky Tegar Pratama</b>
           </sub>
         </a>
+          </td>
+      <td align="center">
+        <a href="https://github.com/ErxTricks">
+          <img src="https://avatars.githubusercontent.com/u/103641668?v=4" width="100px;" alt="Tratatang"/>
+          <br/>
+          <sub>
+            <b>Tratatang</b>
+          </sub>
+        </a>
+      </td>
      </tr>
   </tbody>
 </table>
