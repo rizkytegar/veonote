@@ -4,7 +4,7 @@ import NavbarComponent from '../Components/NavbarComponent';
 import FilterComponent from '../Components/FilterComponent';
 import ListNoteComponent from '../Components/ListNoteComponent';
 import PaginationComponent from '../Components/PaginationComponent';
-import SearchButtonComponent from '../Components/SearchButtonComponent';
+import SearchComponent from '../Components/SearchComponent';
 
 interface VeoLayoutsProps {
     children: ReactNode; 
@@ -17,7 +17,7 @@ const VeoLayouts: React.FC<VeoLayoutsProps> = ({ children }) => {
       <FilterComponent />
       <ListNoteComponent />
       <PaginationComponent />
-      <SearchButtonComponent /> 
+      <SearchComponent /> 
       {children}
      </>
     );
