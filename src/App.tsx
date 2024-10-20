@@ -6,8 +6,7 @@ import VeoLayouts from './Layouts/VeoLayouts';
 import NotePage from './Pages/NotePage';
 import AddNotePage from './Pages/AddNotePage';
 import EditNotePage from './Pages/EditNotePage';
-
-const App: React.FC = () => {
+const App = () => {
   return (
     <Router>
       <VeoLayouts>
