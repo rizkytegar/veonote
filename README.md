@@ -33,7 +33,7 @@ Read the Hacktoberfest guide here: [Guidelines for Hacktoberfest 2024 Contributo
 <table>
   <tbody>
     <tr>
-      <td align="center">
+      <td>
         <a href="https://github.com/rizkytegar">
           <img src="https://avatars.githubusercontent.com/u/55475891?v=4?s=100" width="100px;" alt="Rizky Tegar Pratama"/>
           <br/>
@@ -41,6 +41,16 @@ Read the Hacktoberfest guide here: [Guidelines for Hacktoberfest 2024 Contributo
             <b>Rizky Tegar Pratama</b>
           </sub>
         </a>
+      </td>
+      <td>
+        <a href="https://github.com/uditjainstjis">
+          <img src="https://avatars.githubusercontent.com/u/83398767?v=4?s=100" width="100px;" alt="Udit Jain"/>
+          <br/>
+          <sub>
+            <b>Udit Jain</b>
+          </sub>
+        </a>
+      </td>
      </tr>
   </tbody>
 </table>
