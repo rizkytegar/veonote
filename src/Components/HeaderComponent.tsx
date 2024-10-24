@@ -1,26 +1,12 @@
-import React from 'react';
-import IconAddNote from '../utility/IconAddNote';
-import { useTheme } from './ThemeProvider';
+import React from "react";
+import AddNoteModal from "./AddNoteModal";
 
 const HeaderComponent: React.FC = () => {
-  const { theme } = useTheme();
-
   return (
-    <div className="flex gap-2 justify-between">
+    <div className="flex justify-between gap-2">
       <div></div>
       <div>
-        <button
-          onClick={() => {
-            alert('Add Note');
-          }}
-          className={`flex inline-flex px-7 py-2 rounded-md ${
-            theme === 'light'
-              ? 'bg-gray-200 text-black'
-              : 'bg-gray-800 text-white'
-          }`}
-        >
-          <IconAddNote color={theme === 'light' ? 'black' : 'white'} size={24} /> Add Note
-        </button>
+        <AddNoteModal />
       </div>
     </div>
   );
