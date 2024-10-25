@@ -1,6 +1,3 @@
-import IconAddNote from '../utility/IconAddNote';
-import { useTheme } from './ThemeProvider';
-
 import { zodResolver } from '@hookform/resolvers/zod';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -22,7 +19,6 @@ const addNoteSchema = z.object({
 type AddNoteSchema = z.infer<typeof addNoteSchema>;
 
 export default function AddNoteModal() {
-  const { theme } = useTheme();
   const { addNote } = useNotes();
   const {
     register,
@@ -44,59 +40,42 @@ export default function AddNoteModal() {
   };
 
   return (
-    <>
-      <button
-        className={`btn border-none px-7 ${
-          theme === 'light'
-            ? 'bg-gray-200 text-black hover:bg-gray-300'
-            : 'bg-gray-800 text-white hover:bg-gray-700'
-        }`}
-        onClick={() =>
-          (
-            document?.getElementById('add_note') as HTMLDialogElement
-          )?.showModal()
-        }
-      >
-        <IconAddNote color={theme === 'light' ? 'black' : 'white'} size={24} />{' '}
-        Add Note
-      </button>
-      <dialog id="add_note" className="modal">
-        <div className="modal-box">
-          <h3 className="text-lg font-bold">Add Note</h3>
-          <form
-            className="flex flex-col gap-4 mt-4"
-            onSubmit={handleSubmit(onSubmit)}
-          >
-            <div>
-              <input
-                type="text"
-                placeholder="Title"
-                className="w-full input input-bordered"
-                {...register('title')}
-              />
-              {errors.title && (
-                <p className="mt-2 text-red-500">{errors.title.message}</p>
-              )}
-            </div>
-            <div>
-              <textarea
-                className="w-full textarea textarea-bordered"
-                placeholder="Description"
-                {...register('description')}
-              ></textarea>
-              {errors.description && (
-                <p className="text-red-500">{errors.description.message}</p>
-              )}
-            </div>
-            <button type="submit" className="w-full btn btn-primary">
-              Add Note
-            </button>
-          </form>
-        </div>
-        <form method="dialog" className="modal-backdrop">
-          <button>close</button>
+    <dialog id="add_note" className="modal">
+      <div className="modal-box">
+        <h3 className="text-lg font-bold">Add Note</h3>
+        <form
+          className="flex flex-col gap-4 mt-4"
+          onSubmit={handleSubmit(onSubmit)}
+        >
+          <div>
+            <input
+              type="text"
+              placeholder="Title"
+              className="w-full input input-bordered"
+              {...register('title')}
+            />
+            {errors.title && (
+              <p className="mt-2 text-red-500">{errors.title.message}</p>
+            )}
+          </div>
+          <div>
+            <textarea
+              className="w-full textarea textarea-bordered"
+              placeholder="Description"
+              {...register('description')}
+            ></textarea>
+            {errors.description && (
+              <p className="text-red-500">{errors.description.message}</p>
+            )}
+          </div>
+          <button type="submit" className="w-full btn btn-primary">
+            Add Note
+          </button>
         </form>
-      </dialog>
-    </>
+      </div>
+      <form method="dialog" className="modal-backdrop">
+        <button>close</button>
+      </form>
+    </dialog>
   );
 }

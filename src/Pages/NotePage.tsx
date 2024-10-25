@@ -1,7 +1,8 @@
 import React from 'react';
+import AddNoteModal from '../Components/AddNoteModal';
+import HeaderComponent from '../Components/HeaderComponent';
 import NoteCardComponent from '../Components/NoteCardComponent';
 import PaginationComponent from '../Components/PaginationComponent';
-import HeaderComponent from '../Components/HeaderComponent';
 import { useTheme } from '../Components/ThemeProvider';
 
 const NotePage: React.FC = () => {
@@ -27,6 +28,9 @@ const NotePage: React.FC = () => {
       <div className="flex-grow overflow-auto pb-5">
         <PaginationComponent />
       </div>
+
+      {/* Modals */}
+      <AddNoteModal />
     </div>
   );
 };
