@@ -1,7 +1,7 @@
 import React from 'react';
-import AddNoteModal from '../Components/AddNoteModal';
 import HeaderComponent from '../Components/HeaderComponent';
 import NoteCardComponent from '../Components/NoteCardComponent';
+import NoteModal from '../Components/NoteModal';
 import PaginationComponent from '../Components/PaginationComponent';
 import { useTheme } from '../Components/ThemeProvider';
 
@@ -30,7 +30,7 @@ const NotePage: React.FC = () => {
       </div>
 
       {/* Modals */}
-      <AddNoteModal />
+      <NoteModal />
     </div>
   );
 };

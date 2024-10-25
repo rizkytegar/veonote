@@ -6,7 +6,16 @@ import { useTheme } from './ThemeProvider';
 
 const NoteCardComponent: React.FC = () => {
   const { theme } = useTheme();
-  const { notes } = useNotes();
+  const { notes, setSelectedNote } = useNotes();
+
+  const openEditModal = (noteId: number) => {
+    const note = notes.find((note) => note.id === noteId);
+    if (!note) return;
+    setSelectedNote(note);
+
+    const dialog = document.getElementById('note_modal') as HTMLDialogElement;
+    dialog.showModal();
+  };
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4">
@@ -51,6 +60,7 @@ const NoteCardComponent: React.FC = () => {
                 style={{
                   backgroundColor: theme === 'light' ? '#E5E7EB' : '#374151',
                 }}
+                onClick={() => openEditModal(note.id)}
               >
                 <IconEditNote
                   color={theme === 'light' ? 'black' : 'white'}

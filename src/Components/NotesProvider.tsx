@@ -22,6 +22,8 @@ interface NoteContextProps {
     updatedDescription: string
   ) => void;
   deleteNote: (id: number) => void;
+  selectedNote: Note | null;
+  setSelectedNote: (note: Note | null) => void;
 }
 
 const NotesContext = createContext<NoteContextProps | undefined>(undefined);
@@ -44,6 +46,8 @@ const NotesProvider = ({ children }: { children: ReactNode }) => {
       date: new Date(note.date),
     }));
   });
+
+  const [selectedNote, setSelectedNote] = useState<Note | null>(null);
 
   useEffect(() => {
     localStorage.setItem('veonote', JSON.stringify(notes));
@@ -82,7 +86,16 @@ const NotesProvider = ({ children }: { children: ReactNode }) => {
   };
 
   return (
-    <NotesContext.Provider value={{ notes, addNote, editNote, deleteNote }}>
+    <NotesContext.Provider
+      value={{
+        notes,
+        addNote,
+        editNote,
+        deleteNote,
+        selectedNote,
+        setSelectedNote,
+      }}
+    >
       {children}
     </NotesContext.Provider>
   );

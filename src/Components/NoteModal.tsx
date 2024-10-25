@@ -1,9 +1,10 @@
 import { zodResolver } from '@hookform/resolvers/zod';
+import { useEffect } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { useNotes } from './NotesProvider';
 
-const addNoteSchema = z.object({
+const noteSchema = z.object({
   title: z
     .string()
     .trim()
@@ -16,33 +17,44 @@ const addNoteSchema = z.object({
     .max(1000, { message: 'Description must be at most 1000 characters' }),
 });
 
-type AddNoteSchema = z.infer<typeof addNoteSchema>;
+type NoteSchema = z.infer<typeof noteSchema>;
 
-export default function AddNoteModal() {
-  const { addNote } = useNotes();
+export default function NoteModal() {
+  const { addNote, editNote, selectedNote, setSelectedNote } = useNotes();
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm<AddNoteSchema>({
-    resolver: zodResolver(addNoteSchema),
+  } = useForm<NoteSchema>({
+    resolver: zodResolver(noteSchema),
   });
 
-  const onSubmit: SubmitHandler<AddNoteSchema> = async (data) => {
+  useEffect(() => {
+    if (selectedNote) reset(selectedNote);
+  }, [selectedNote, reset]);
+
+  const onSubmit: SubmitHandler<NoteSchema> = async (data) => {
     try {
-      addNote(data.title, data.description);
+      if (selectedNote) {
+        editNote(selectedNote.id, data.title, data.description);
+      } else {
+        addNote(data.title, data.description);
+      }
       reset();
-      (document?.getElementById('add_note') as HTMLDialogElement)?.close();
+      setSelectedNote(null);
+      (document?.getElementById('note_modal') as HTMLDialogElement)?.close();
     } catch (error) {
       console.log(error);
     }
   };
 
   return (
-    <dialog id="add_note" className="modal">
+    <dialog id="note_modal" className="modal">
       <div className="modal-box">
-        <h3 className="text-lg font-bold">Add Note</h3>
+        <h3 className="text-lg font-bold">
+          {selectedNote ? 'Edit' : 'Add'} Note
+        </h3>
         <form
           className="flex flex-col gap-4 mt-4"
           onSubmit={handleSubmit(onSubmit)}
@@ -69,7 +81,7 @@ export default function AddNoteModal() {
             )}
           </div>
           <button type="submit" className="w-full btn btn-primary">
-            Add Note
+            {selectedNote ? 'Edit' : 'Add'} Note
           </button>
         </form>
       </div>
