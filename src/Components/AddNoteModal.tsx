@@ -1,29 +1,29 @@
-import { useTheme } from "./ThemeProvider";
-import IconAddNote from "../utility/IconAddNote";
+import IconAddNote from '../utility/IconAddNote';
+import { useTheme } from './ThemeProvider';
 
-import { SubmitHandler, useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import useNotes from "../hooks/useNotes";
+import { zodResolver } from '@hookform/resolvers/zod';
+import { SubmitHandler, useForm } from 'react-hook-form';
+import { z } from 'zod';
+import { useNotes } from './NotesProvider';
 
 const addNoteSchema = z.object({
   title: z
     .string()
     .trim()
-    .min(4, { message: "Title must be at least 4 characters" })
-    .max(100, { message: "Title must be at most 20 characters" }),
+    .min(4, { message: 'Title must be at least 4 characters' })
+    .max(100, { message: 'Title must be at most 20 characters' }),
   description: z
     .string()
     .trim()
-    .min(6, { message: "Description must be at least 6 characters" })
-    .max(1000, { message: "Description must be at most 1000 characters" }),
+    .min(6, { message: 'Description must be at least 6 characters' })
+    .max(1000, { message: 'Description must be at most 1000 characters' }),
 });
 
 type AddNoteSchema = z.infer<typeof addNoteSchema>;
 
 export default function AddNoteModal() {
   const { theme } = useTheme();
-  const { addNote, notes } = useNotes();
+  const { addNote } = useNotes();
   const {
     register,
     handleSubmit,
@@ -37,27 +37,27 @@ export default function AddNoteModal() {
     try {
       addNote(data.title, data.description);
       reset();
-      (document?.getElementById("add_note") as HTMLDialogElement)?.close();
+      (document?.getElementById('add_note') as HTMLDialogElement)?.close();
     } catch (error) {
       console.log(error);
     }
   };
-  console.log(notes, "notes");
+
   return (
     <>
       <button
         className={`btn border-none px-7 ${
-          theme === "light"
-            ? "bg-gray-200 text-black hover:bg-gray-300"
-            : "bg-gray-800 text-white hover:bg-gray-700"
+          theme === 'light'
+            ? 'bg-gray-200 text-black hover:bg-gray-300'
+            : 'bg-gray-800 text-white hover:bg-gray-700'
         }`}
         onClick={() =>
           (
-            document?.getElementById("add_note") as HTMLDialogElement
+            document?.getElementById('add_note') as HTMLDialogElement
           )?.showModal()
         }
       >
-        <IconAddNote color={theme === "light" ? "black" : "white"} size={24} />{" "}
+        <IconAddNote color={theme === 'light' ? 'black' : 'white'} size={24} />{' '}
         Add Note
       </button>
       <dialog id="add_note" className="modal">
@@ -72,7 +72,7 @@ export default function AddNoteModal() {
                 type="text"
                 placeholder="Title"
                 className="w-full input input-bordered"
-                {...register("title")}
+                {...register('title')}
               />
               {errors.title && (
                 <p className="mt-2 text-red-500">{errors.title.message}</p>
@@ -82,7 +82,7 @@ export default function AddNoteModal() {
               <textarea
                 className="w-full textarea textarea-bordered"
                 placeholder="Description"
-                {...register("description")}
+                {...register('description')}
               ></textarea>
               {errors.description && (
                 <p className="text-red-500">{errors.description.message}</p>
