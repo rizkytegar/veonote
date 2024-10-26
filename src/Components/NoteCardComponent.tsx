@@ -6,7 +6,7 @@ import { useTheme } from './ThemeProvider';
 
 const NoteCardComponent: React.FC = () => {
   const { theme } = useTheme();
-  const { notes, setSelectedNote } = useNotes();
+  const { notes, setSelectedNote, deleteNote } = useNotes();
 
   const openEditModal = (noteId: number) => {
     const note = notes.find((note) => note.id === noteId);
@@ -72,6 +72,7 @@ const NoteCardComponent: React.FC = () => {
                 style={{
                   backgroundColor: theme === 'light' ? '#E5E7EB' : '#374151',
                 }}
+                onClick={() => deleteNote(note.id)}
               >
                 <IconDeleteNote
                   color={theme === 'light' ? 'black' : 'white'}
